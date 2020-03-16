@@ -17,7 +17,20 @@
                 task[data[i]['userId'] - 1]++;
             }
         }
-        
+        var min = task[0], max = task[0], pmin = 0, pmax = 0;
+        for(var i = 0 ; i < 10 ; ++i)
+        {
+            if(task[i] > max)
+            {
+                max = task[i];
+                pmax = i;
+            }
+            if(task[i] < min)
+            {
+                min = task[i];
+                pmin = i;
+            }
+        }
     </script>
 </body>
 </html>
