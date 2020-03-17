@@ -34,11 +34,16 @@
                 lastResult.textContent = 'Congratulations! You got it right!';
                 lastResult.style.backgroundColor = 'green';
             }
+            else if (guessCount === 10) 
+            {
+                lastResult.textContent = 'Game Over. Please try again.!';
+            }
             else 
             {
                 lastResult.textContent = 'Wrong!';
                 lastResult.style.backgroundColor = 'red';
             }
+            guessCount++;
         }
 
         guessSubmit.addEventListener('click', checkGuess);
