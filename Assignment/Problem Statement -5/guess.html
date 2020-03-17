@@ -29,6 +29,14 @@
             let userValue = Number(guessField.value);
             //console.log(userValue);
             console.log(guessCount);
+
+            if (guessCount === 1) 
+            {
+                guesses.textContent = 'Previous guesses: ';
+            }
+
+        guesses.textContent += userGuess + ' ';
+
             if (userValue === randomNumber)
             {
                 lastResult.textContent = 'Congratulations! You got it right!';
