@@ -11,12 +11,14 @@ clicking on edit button, it should open a new web page with all the data fields
 already filled for corresponding ID. After you click delete button, a confirmation
 should be taken to remove or cancel the record.
 
+----------------------------------------------------------------
 
 Problem Statement -2
 Visit - https://jsonplaceholder.typicode.com/todos and parse JSON data to find
 out the ID of all users those have completed minimum and maximum number of
 tasks.
 
+----------------------------------------------------------------
 
 Problem Statement -3
 Visit - https://jsonplaceholder.typicode.com/posts and do the following with
@@ -38,6 +40,7 @@ where third column shows the number of times a keyword appeared in that
 particular user and post ID.
 You should generate the output for all the users that are in JSON file.
 
+----------------------------------------------------------------
 
 Problem Statement -4
 This problem is taken from - Recruitment Test Part II for post of Software Engineer
@@ -56,8 +59,7 @@ true, print the name of item, and go inside its children.
 that we are inside children of 'item'). If selected was 1 then print the
 name of child, and go further deep inside the children
 Repeat the last step infinitely - until we have reached the deepest child
-The output should look like this :
----------------------------------------------
+The output should look like this:
 Restaurant1
 --> Item1
 -----> Child1
@@ -73,6 +75,7 @@ Note -
 A. Attached is the JSON file, named parse.json which you have to parse.
 B. This video will help you complete the assignment - Parse JSON File
 
+----------------------------------------------------------------
 
 Problem Statement -5 
 Guess The Number Game using JavaScript
