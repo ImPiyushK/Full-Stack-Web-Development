@@ -36,7 +36,7 @@
             {
                 guesses.textContent = 'Previous guesses: ';
             }
-            //guesses.textContent += userGuess + ' ';
+            guesses.textContent = guesses.textContent + userValue + ' ';
 
             if (userValue === randomNumber)
             {
@@ -46,6 +46,7 @@
             else if (guessCount === 10) 
             {
                 lastResult.textContent = 'Game Over. Please try again.!';
+                guesses.textContent = '';
             }
             else 
             {
