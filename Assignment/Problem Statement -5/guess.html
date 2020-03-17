@@ -19,6 +19,7 @@
     
     <script>
         let randomNumber = 1 + Math.floor(Math.random() * 100);
+        console.log(randomNumber);
         let guessCount = 1;
         const guessSubmit = document.querySelector('.guessSubmit');
         const lastResult = document.querySelector('.lastResult');
@@ -27,12 +28,16 @@
         {
             let userValue = Number(guessField.value);
             //console.log(userValue);
-            console.log(randomNumber);
 
             if (userValue === randomNumber)
             {
                 lastResult.textContent = 'Congratulations! You got it right!';
                 lastResult.style.backgroundColor = 'green';
+            }
+            else 
+            {
+                lastResult.textContent = 'Wrong!';
+                lastResult.style.backgroundColor = 'red';
             }
         }
 
