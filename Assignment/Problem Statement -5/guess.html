@@ -13,15 +13,27 @@
         <input type="submit" value="Submit guess" class="guessSubmit">
     </div>
 
+    <div>
+        <p class="lastResult"></p>
+    </div>
+    
     <script>
         let randomNumber = 1 + Math.floor(Math.random() * 100);
         let guessCount = 1;
         const guessSubmit = document.querySelector('.guessSubmit');
+        const lastResult = document.querySelector('.lastResult');
 
         function checkGuess()
         {
             let userValue = Number(guessField.value);
-            console.log(userValue);
+            //console.log(userValue);
+            console.log(randomNumber);
+
+            if (userValue === randomNumber)
+            {
+                lastResult.textContent = 'Congratulations! You got it right!';
+                lastResult.style.backgroundColor = 'green';
+            }
         }
 
         guessSubmit.addEventListener('click', checkGuess);
