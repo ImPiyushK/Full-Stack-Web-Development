@@ -15,7 +15,7 @@
 
     <div>
         <p class="lastResult"></p>
-        <p class="lastResult"></p>
+        <p class="guesses"></p>
     </div>
     
     <script>
@@ -24,6 +24,7 @@
         let guessCount = 1;
         const guessSubmit = document.querySelector('.guessSubmit');
         const lastResult = document.querySelector('.lastResult');
+        const guesses = document.querySelector('.guesses');
 
         function checkGuess()
         {
