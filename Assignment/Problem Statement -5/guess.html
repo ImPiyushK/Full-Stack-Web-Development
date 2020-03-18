@@ -47,25 +47,18 @@
           pred.textContent = '';
           exit();
         } 
-        else if (guessCount === 1) 
-        {
+        else if (guessCount === 1) {
           result.textContent = 'Game Over! Please try again.';
           pred.textContent = '';
           exit();
-        } 
-        else 
-        {
-            result.textContent = 'Wrong!';
-            result.style.backgroundColor = 'red';
-
-            if(userGuess < randomNumber) 
-            {
-                pred.textContent = 'Last guess was too low!' ;
-            }
-            else if(userGuess > randomNumber) 
-            {
-                pred.textContent = 'Last guess was too high!';
-            }
+        } else {
+          result.textContent = 'Wrong!';
+          result.style.backgroundColor = 'red';
+          if(userGuess < randomNumber) {
+            pred.textContent = 'Last guess was too low!' ;
+          } else if(userGuess > randomNumber) {
+            pred.textContent = 'Last guess was too high!';
+          }
         }
 
         guessCount--;
@@ -73,39 +66,32 @@
         field.focus();
       }
 
-      function exit() 
-      {
+      submit.addEventListener('click', checkGuess);
+
+      function exit() {
         field.disabled = true;
         submit.disabled = true;
-
         resetButton = document.createElement('button');
         resetButton.textContent = 'Start new game';
         document.body.appendChild(resetButton);
         resetButton.addEventListener('click', start);
       }
 
-      function start() 
-      {
+      function start() {
         guessCount = 1;
         const resetParas = document.querySelectorAll('.final p');
-
-        for(let i = 0 ; i < resetParas.length ; i++) 
-        {
-            resetParas[i].textContent = '';
+        for(let i = 0 ; i < resetParas.length ; i++) {
+          resetParas[i].textContent = '';
         }
 
         resetButton.parentNode.removeChild(resetButton);
-
         field.disabled = false;
         submit.disabled = false;
         field.value = '';
-        
         field.focus();
-        
         result.style.backgroundColor = 'white';
         randomNumber = Math.floor(Math.random() * 100) + 1;
       }
-        submit.addEventListener('click', checkGuess);
     </script>
   </body>
 </html>
