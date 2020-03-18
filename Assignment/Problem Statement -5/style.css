@@ -1,29 +1,23 @@
-form {
-  border: 5px solid black;
-  width: 500px;
-  height: 400px;
-  border-radius: 10px;
-  background-color:   #f2eded;
-  margin: auto;
-}
-
-html {
+html 
+  {
     font-family: sans-serif;
   }
-  
-  body {
+
+  body 
+  {
     width: 50%;
     max-width: 800px;
     min-width: 480px;
     margin: 0 auto;
   }
 
-  .lastResult {
+  .lastResult 
+  {
     color: white;
     padding: 3px;
   }
-  button:hover{
-    background-color: blue;
-    color: white;
+  button:hover
+  {
+    background-color: lightblue;
     transition-duration: 0.4s;
   }
