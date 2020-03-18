@@ -42,11 +42,13 @@
             {
                 lastResult.textContent = 'Congratulations! You got it right!';
                 lastResult.style.backgroundColor = 'green';
+                exit();
             }
             else if (guessCount === 10) 
             {
                 lastResult.textContent = 'Game Over. Please try again.!';
                 guesses.textContent = '';
+                exit();
             }
             else 
             {
@@ -58,7 +60,7 @@
 
         guessSubmit.addEventListener('click', checkGuess);
 
-        function setGameOver() 
+        function exit() 
         {
             guessField.disabled = true;
             guessSubmit.disabled = true;
