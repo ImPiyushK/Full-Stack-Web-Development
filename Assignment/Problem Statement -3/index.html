@@ -16,6 +16,39 @@
 		<p class="display" id="display"></p>
     </div>
     
-   
+    <script>
+        function parse()
+    {
+      var s = document.getElementById('value').value;
+      if(s == "")
+      {
+        location.reload();
+      }
+      else
+      {
+        document.getElementById('display').innerHTML = "";
+        for(i=1;i<=10;++i)
+        {
+          for(x in data)
+          {
+            if(data[x]["userId"] == i)
+            {
+              str = data[x]["body"];
+              if(str.search(s) != -1)
+              {
+                var occurence = str.split(s).length - 1;
+                var temp = i + " " + data[x]["id"] + " " + occurence + "<br>";
+                document.getElementById('display').innerHTML += temp; 
+              }
+            }
+          }
+        }
+      }
+      if(document.getElementById('display').innerHTML == "")
+      {
+        document.getElementById('display').innerHTML = "Element not found";
+      }
+    }
+    </script>
 </body>
 </html>
