@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Index</title>
+    <script type="text/javascript" src="data.js"></script>
+</head>
+<body>
+    <div class="div">
+		<h1 class="head">PARSE! the data </h1>
+		<h3 class="label">Enter the text</h3>
+		<input  type="text" id="value"><br><br>
+		<button class="button" onclick="parse()">Press</button>
+
+		<button class="reset" id="reset" onclick="location.reload()">reload</button><br>
+		<h3 class="details">Details</h3>
+		<p class="display" id="display"></p>
+    </div>
+    
+    <script>
+    function parse()
+{
+  var s = document.getElementById('value').value;
+  if(s == "")
+  {
+    location.reload();
+  }
+  else
+  {
+    document.getElementById('display').innerHTML = "";
+    for(i=1;i<=10;++i)
+    {
+      for(x in data)
+      {
+        if(data[x]["userId"] == i)
+        {
+          str = data[x]["body"];
+          if(str.search(s) != -1)
+          {
+            var occurence = str.split(s).length - 1;
+            var temp = i + " " + data[x]["id"] + " " + occurence + "<br>";
+            document.getElementById('display').innerHTML += temp; 
+          }
+        }
+      }
+    }
+  }
+  if(document.getElementById('display').innerHTML == "")
+  {
+    document.getElementById('display').innerHTML = "Element not found";
+  }
+}
+</script>
+</body>
+</html>
