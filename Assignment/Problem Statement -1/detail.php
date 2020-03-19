@@ -22,7 +22,21 @@
                     <th>Delete</th>
                  </tr>
             </thead>
-            
+            <tbody>
+                <?php
+                     while($data = $result->fetch_assoc())
+                     {
+                ?>
+                <tr>
+                    <td> <?php echo $data['id']; ?> </td>
+                    <td> <?php echo $data['name']; ?> </td>
+                    <td> <?php echo $data['age']; ?> </td>
+                    <td> <?php echo $data['contact']; ?> </td>
+                    <td> <?php echo $data['email']; ?> </td>
+                    <td> <a href = "edit.php?id=<?php $data['id'];?>">Edit</a> </td>              
+                 </tr>
+                <?php } ?>
+            </tbody>
         <?php } ?>
         </table>
     </body>
