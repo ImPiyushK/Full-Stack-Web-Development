@@ -13,25 +13,26 @@
 		<p class="display" id="display"></p>
     </div>
     <script>
-        function deep(rec_obj,rec_j)
-{
-	if(typeof rec_obj === 'undefined' || typeof rec_j === 'undefined')
+    function deep(rec_obj,rec_j)
 	{
-		return;
-	}
-	if(typeof rec_obj[rec_j] !== 'undefined' && rec_obj[rec_j]["selected"] == "1")
-	{
-		document.getElementById('display').innerHTML += "------->" + rec_obj[rec_j]["name"] + "<br>";
-		rec_obj1 = rec_obj[rec_j]["children"];
-		for(rec_j1 in rec_obj1)
+		if(typeof rec_obj === 'undefined' || typeof rec_j === 'undefined')
 		{
-			deep(rec_obj1,rec_j1);	
+			return;
 		}
-	}else
-	{
-		return;
+		if(typeof rec_obj[rec_j] !== 'undefined' && rec_obj[rec_j]["selected"] == "1")
+		{
+			document.getElementById('display').innerHTML += "------->" + rec_obj[rec_j]["name"] + "<br>";
+			rec_obj1 = rec_obj[rec_j]["children"];
+			for(rec_j1 in rec_obj1)
+			{
+				deep(rec_obj1,rec_j1);	
+			}
+		}
+		else
+		{
+			return;
+		}
 	}
-}
     </script>
 </body>
 </html>
