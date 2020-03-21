@@ -8,7 +8,6 @@
 <body>
     <script src="todos.js"></script>
     <script type="text/javascript">
-        //console.log(data[0])
         var task = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
         for(var i = 0 ; i < data.length ; ++i)
         {
@@ -31,22 +30,8 @@
                 pmin = i;
             }
         }
-        /*Printing Task Array
-        for(var i = 0 ; i < 10 ; ++i)
-        {
-            console.log(task[i]);
-        }
-        */
         console.log(pmax+1);
         console.log(pmin+1);
-
-        /*Finding all IDs
-        for(var i = 0 ; i < data.length ; ++i)
-        {
-            if(data[i]['userId'] == pmax+1)
-                console.log(data[i]['id']);
-        }
-        */
     </script>
 </body>
 </html>
