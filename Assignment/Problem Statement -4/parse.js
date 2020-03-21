@@ -27064,34 +27064,3 @@ var obj = [{
 	},
 	"status": "recommendation_found"
 }];
-function parse()
-{		
-	obj = obj["0"]["body"]["Recommendations"];
-	for(_ in obj)
-	{
-		document.getElementById('display').innerHTML += "-->" + obj[_]["RestaurantName"] + "<br>";
-		obj1 = obj[_]["menu"];
-		for(j1 in obj1)
-		{
-			if(obj1[j1]["type"] == "sectionheader")
-			{
-				obj2 = obj1[j1]["children"];
-				for(j2 in obj2)
-				{
-					if(obj2[j2]["type"] == "item")
-					{
-						if(obj2[j2]["selected"] == "1")
-						{
-							document.getElementById('display').innerHTML += "---->" + obj2[j2]["name"] + "<br>";
-							obj3 = obj2[j2]["children"];
-							for(j3 in obj3)
-							{
-								deep(obj3,j3);
-							}
-						}
-					}
-				}
-			}
-		}
-	}
-}
